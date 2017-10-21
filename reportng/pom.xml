@@ -20,10 +20,16 @@
   </licenses>
   
   <dependencies>
+    <!--<dependency>-->
+      <!--<groupId>org.testng</groupId>-->
+      <!--<artifactId>testng</artifactId>-->
+      <!--<version>[5.0,)</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>[5.0,)</version>
+      <version>6.9.9</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>velocity</groupId>
