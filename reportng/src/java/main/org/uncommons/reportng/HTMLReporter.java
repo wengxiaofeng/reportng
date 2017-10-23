@@ -99,6 +99,17 @@ public class HTMLReporter extends AbstractReporter
         File outputDirectory = new File(outputDirectoryName, REPORT_DIRECTORY);
         outputDirectory.mkdirs();
 
+        //去掉总的测试套,因为没有实际的用例,只有下一级测试套
+        for(ISuite suite : suites) {
+            List<ITestNGMethod> methodsList = suite.getAllMethods();
+            if (0 == methodsList.size()){
+                //没有method说明是总测试套
+                //从list中除掉
+                suites.remove(suite);
+                break;
+            }
+        }
+
         try
         {
             if (useFrames)
