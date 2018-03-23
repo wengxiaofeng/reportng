@@ -59,7 +59,7 @@
     #if ($testResult.throwable && ( $testResult.status == 2 || $meta.shouldShowExpectedExceptions()))
         <a href="$testResult.attributes.attributes.get(1)" target="_blank">
 
-            <img height="300" width="600" src="$testResult.attributes..attributesget('1')"/>
+            <img height="300" width="600" src="$testResult.attributes.attributes.get('1')"/>
         </a>
         <a href="javascript:toggleElement('exception-$id', 'block')" title="$messages.getString("clickToExpandCollapse")"><b>$utils.escapeHTMLString( $testResult.throwable.toString() )</b></a><br />
     <div class="stackTrace" id="exception-$id">
